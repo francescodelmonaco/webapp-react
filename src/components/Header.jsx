@@ -16,7 +16,7 @@ export default function Header() {
                             </li>
 
                             <li className="nav-item">
-                                <NavLink className="nav-link" to={"/films/:id"}>Film list</NavLink>
+                                <NavLink className="nav-link" to={"/movies/:id"}>Film list</NavLink>
                             </li>
                         </ul>
                     </div>
