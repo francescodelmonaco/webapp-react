@@ -14,10 +14,6 @@ export default function Header() {
                             <li className="nav-item">
                                 <NavLink className="nav-link" aria-current="page" to={"/"}>Home Page</NavLink>
                             </li>
-
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to={"/movies/:id"}>Film list</NavLink>
-                            </li>
                         </ul>
                     </div>
                 </div>

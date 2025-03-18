@@ -31,7 +31,7 @@ export default function FilmPage() {
         <>
             <h1 className="text-center py-3">{movie?.title}</h1>
 
-            <img src={movie?.image} alt={movie?.title} />
+            {/* <img src={movie?.image} alt={movie?.title} /> */}
 
             <section className="container">
                 <h5 className="mb-3">Our community reviews:</h5>
