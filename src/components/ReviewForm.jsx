@@ -86,7 +86,7 @@ export default function ReviewForm({ movie_id, reloadReviews }) {
 
                     <div className="pt-3">
                         <button type="submit" className="btn btn-primary">
-                            Crea Recensione
+                            Crea recensione
                         </button>
                     </div>
                 </form>

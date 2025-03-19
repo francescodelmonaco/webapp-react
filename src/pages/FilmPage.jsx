@@ -34,10 +34,28 @@ export default function FilmPage() {
         <>
             <h1 className="text-center py-3">{movie?.title}</h1>
 
-            {/* <img src={movie?.image} alt={movie?.title} /> */}
+            <div className="container">
+                <div className="card p-2 mb-4">
+                    <div className="row g-3">
+                        <div className="col-3">
+                            <img src={movie?.image} className="card-img-top rounded" alt={movie?.title} />
+                        </div>
+
+                        <div className="col-9">
+                            <div className="card-body">
+                                <h5 className="card-title">{movie?.title}</h5>
+                                <span><strong>{movie?.director}</strong></span>
+                                <br />
+                                <span>{movie?.release_year}</span>
+                                <p className="card-text">{movie?.abstract}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <section className="container">
-                <h5 className="mb-3">Our community reviews:</h5>
+                <h5 className="mb-3">Le recensioni della nostra community:</h5>
                 {renderReviews()}
             </section>
 
