@@ -1,17 +1,22 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import FilmCard from "../components/FilmCard";
+import GlobalContext from "../contexts/globalContext";
 
 // chiamata api con axios per stampare tutte le film cards nella home page aiutandoci con map per automatizzare
-
 export default function HomePage() {
     const [movies, setMovies] = useState([]);
 
+    const { setIsLoading } = useContext(GlobalContext);
+
     // chiamata fetch
     const fetchFilms = () => {
+        setIsLoading(true)
+
         axios.get("http://localhost:3000/movies")
             .then((res) => { setMovies(res.data) })
             .catch((error) => { console.log(error) })
+            .then(() => setIsLoading(false));
     };
 
     // funzione da richiamare dentro return
